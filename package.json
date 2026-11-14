@@ -1,0 +1,21 @@
+{
+  "name": "placement-tracker",
+  "version": "1.0.0",
+  "description": "App designed to track university placements, allowing students to stay on top of deadlines and know the next stages of each placement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MutindaMutio/Placement-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MutindaMutio/Placement-Tracker/issues"
+  },
+  "homepage": "https://github.com/MutindaMutio/Placement-Tracker#readme"
+}

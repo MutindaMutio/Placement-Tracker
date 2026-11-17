@@ -13,3 +13,8 @@ test("sortByDeadline orders applications from earliest deadline to latest", () =
   const expected = [applications[1], applications[2], applications[0]];
   expect(result).toEqual(expected);
 });
+
+test("sortByDeadline does not reorder the list it is given", () => {
+  sortByDeadline(applications);
+  expect(applications[0].company).toBe("Acme");
+});

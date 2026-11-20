@@ -17,9 +17,6 @@ function App() {
         </div>
         <div>
           <h1>Placement Tracker</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
         </div>
         <button
           type="button"

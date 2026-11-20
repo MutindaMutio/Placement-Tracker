@@ -19,9 +19,6 @@ function App() {
         </button>
       </section>
 
-      <div className="ticks"></div>
-
-      <div className="ticks"></div>
       <section id="spacer"></section>
     </>
   )

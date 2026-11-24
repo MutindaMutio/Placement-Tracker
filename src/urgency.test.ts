@@ -9,3 +9,12 @@ test("getUrgency is None when the status is not Not started, even with a close d
     )
   ).toBe("None");
 });
+
+test("getUrgency is closing soon when a Not started deadline is exactly 7 days away", () => {
+  expect(
+    getUrgency(
+      { company: "Acme", role: "Developer", deadline: "2026-11-23", status: "Not started" },
+      "2026-11-16"
+    )
+  ).toBe("Closing soon");
+});

@@ -5,6 +5,6 @@ The app will list them, allow you to add, edit, delete them, filter by status, s
 
 **Status:** Three functions are written and tested: filter applications by status, sort them by deadline, and count the days left until a deadline. There is no web page or back end yet.
 
-**Tests:** 7 passing tests. Run them with `npm test`.
+**Tests:** 8 passing tests. Run them with `npm test`.
 
 **Planned:** A React front end that lists applications, adds new ones and changes their status, with the data kept in the browser only for now.

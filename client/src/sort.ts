@@ -1,4 +1,4 @@
-import { Application } from "./application.js";
+import type { Application } from "./application.js";
 
 function compareDeadlines(a: Application, b: Application): number {
   if (a.deadline < b.deadline) {

@@ -1,4 +1,4 @@
-import { Application } from "./application.js";
+import type { Application } from "./application.js";
 import { daysLeft } from "./daysLeft.js";
 
 export type Urgency = "Closing soon" | "Passed" | "None"

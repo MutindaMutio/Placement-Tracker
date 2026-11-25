@@ -3,12 +3,12 @@ import './App.css'
 import type { Application } from './application.js'
 import { ApplicationRow } from './ApplicationRow.js'
 
-const fakeApplication: Application = {
-  company: 'Acme',
-  role: 'Developer',
-  deadline: '2026-12-04',
-  status: 'Not started',
-}
+const fakeApplications: Application[] = [
+  { company: 'Acme', role: 'Developer', deadline: '2026-12-04', status: 'Not started' },
+  { company: 'Northwind', role: 'Software Engineer', deadline: '2026-11-28', status: 'Not started' },
+  { company: 'Font', role: 'Web Developer', deadline: '2026-11-20', status: 'Not started' },
+  { company: 'Test', role: 'Frontend Developer', deadline: '2026-11-27', status: 'Applied' },
+]
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +19,9 @@ function App() {
         <div>
           <h1>Placement Tracker</h1>
         </div>
-        <ApplicationRow application={fakeApplication} />
+        {fakeApplications.map((application) => (
+          <ApplicationRow key={application.company} application={application} />
+        ))}
         <button
           type="button"
           className="counter"

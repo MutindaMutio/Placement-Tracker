@@ -182,3 +182,8 @@
     border-right-color: var(--border);
   }
 }
+
+[data-urgency="Closing soon"] {
+  color: #b42318;
+  font-weight: 600;
+}

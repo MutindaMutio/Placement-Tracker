@@ -188,6 +188,6 @@
   font-weight: 600;
 }
 
-[data-urgency="Passed"] {
+[data-urgency="Deadline passed"] {
   text-decoration: line-through;
 }

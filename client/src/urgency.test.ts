@@ -19,13 +19,13 @@ test("getUrgency is closing soon when a Not started deadline is exactly 7 days a
   ).toBe("Closing soon");
 });
 
-test("getUrgency is Passed when a Not started deadline was yesterday", () => {
+test("getUrgency is Deadline passed when a Not started deadline was yesterday", () => {
   expect(
     getUrgency(
       { company: "Acme", role: "Developer", deadline: "2026-11-15", status: "Not started" },
       "2026-11-16"
     )
-  ).toBe("Passed");
+  ).toBe("Deadline passed");
 });
 
 test("getUrgency is None when a Not started deadline is 8 days away", () => {

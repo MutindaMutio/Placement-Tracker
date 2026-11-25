@@ -1,7 +1,7 @@
 import type { Application } from "./application.js";
 import { daysLeft } from "./daysLeft.js";
 
-export type Urgency = "Closing soon" | "Passed" | "None"
+export type Urgency = "Closing soon" | "Deadline passed" | "None"
 
 const CLOSING_SOON_DAYS = 7;
 
@@ -11,7 +11,7 @@ export function getUrgency(application: Application, today: string): Urgency {
     }
     const days = daysLeft(application.deadline, today);
     if (days < 0) {
-        return "Passed";
+        return "Deadline passed";
     }
     if (days <= CLOSING_SOON_DAYS) {
         return "Closing soon";

@@ -7,6 +7,7 @@ type ApplicationRowProps = {
 export function ApplicationRow({ application }: ApplicationRowProps) {
   return (
     <div>
+      <span>{application.status}</span>
       <p>{application.company}, {application.role}</p>
     </div>
   );

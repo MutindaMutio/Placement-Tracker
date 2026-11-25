@@ -187,3 +187,7 @@
   color: #b42318;
   font-weight: 600;
 }
+
+[data-urgency="Passed"] {
+  text-decoration: line-through;
+}

@@ -20,7 +20,7 @@ function App() {
           <h1>Placement Tracker</h1>
         </div>
         {fakeApplications.map((application) => (
-          <ApplicationRow key={application.company} application={application} />
+          <ApplicationRow key={application.company} application={application} today="2026-11-25" />
         ))}
         <button
           type="button"

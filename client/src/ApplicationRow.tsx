@@ -12,7 +12,7 @@ export function ApplicationRow({ application, today }: ApplicationRowProps) {
     <div>
       <span>{application.status}</span>
       <p>{application.company}, {application.role}</p>
-      <p>{application.deadline}</p>
+      <p className="deadline">{application.deadline}</p>
       <p>{urgency}</p>
     </div>
   );

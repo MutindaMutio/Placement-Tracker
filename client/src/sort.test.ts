@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
 import { sortByDeadline } from "./sort.js";
-import { Application } from "./application.js";
+import type { Application } from "./application.js";
 
 const applications: Application[] = [
   { company: "Acme", role: "Developer", deadline: "2026-12-04", status: "Applied" },

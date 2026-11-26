@@ -13,6 +13,8 @@ const fakeApplications: Application[] = [
   { company: 'Test', role: 'Frontend Developer', deadline: '2026-11-27', status: 'Applied' },
 ]
 
+const today = new Date().toISOString().slice(0, 10)
+
 function App() {
   const [filter, setFilter] = useState<ApplicationStatus | "All">("All")
   const visible = filter === "All" ? fakeApplications : filterByStatus(fakeApplications, filter)
@@ -30,7 +32,7 @@ function App() {
           ))}
         </select>
         {sortByDeadline(visible).map((application) => (
-          <ApplicationRow key={application.company} application={application} today="2026-11-25" />
+          <ApplicationRow key={application.company} application={application} today={today} />
         ))}
       </section>
     </>

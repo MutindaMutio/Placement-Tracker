@@ -27,4 +27,5 @@ select {
 .status-pill {
   display: inline-block;
   border: 1px solid var(--text-h);
+  padding: 2px 8px;
 }

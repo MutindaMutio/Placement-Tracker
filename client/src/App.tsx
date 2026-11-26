@@ -5,15 +5,16 @@ import { APPLICATION_STATUSES } from './application.js'
 import { ApplicationRow } from './ApplicationRow.js'
 import { sortByDeadline } from './sort.js'
 import { filterByStatus } from './filter.js'
-
-const fakeApplications: Application[] = [
-  { company: 'Acme', role: 'Developer', deadline: '2026-12-04', status: 'Not started' },
-  { company: 'Northwind', role: 'Software Engineer', deadline: '2026-11-28', status: 'Not started' },
-  { company: 'Font', role: 'Web Developer', deadline: '2026-11-20', status: 'Not started' },
-  { company: 'Test', role: 'Frontend Developer', deadline: '2026-11-27', status: 'Applied' },
-]
+import { addDays } from './addDays.js'
 
 const today = new Date().toISOString().slice(0, 10)
+
+const fakeApplications: Application[] = [
+  { company: 'Acme', role: 'Developer', deadline: addDays(today, 14), status: 'Not started' },
+  { company: 'Northwind', role: 'Software Engineer', deadline: addDays(today, 2), status: 'Not started' },
+  { company: 'Font', role: 'Web Developer', deadline: addDays(today, -6), status: 'Not started' },
+  { company: 'Test', role: 'Frontend Developer', deadline: addDays(today, 1), status: 'Applied' },
+]
 
 function App() {
   const [filter, setFilter] = useState<ApplicationStatus | "All">("All")

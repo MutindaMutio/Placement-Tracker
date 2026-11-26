@@ -17,8 +17,9 @@ const fakeApplications: Application[] = [
 ]
 
 function App() {
+  const [applications, setApplications] = useState<Application[]>(fakeApplications)
   const [filter, setFilter] = useState<ApplicationStatus | "All">("All")
-  const visible = filter === "All" ? fakeApplications : filterByStatus(fakeApplications, filter)
+  const visible = filter === "All" ? applications : filterByStatus(applications, filter)
 
   return (
     <>
@@ -33,7 +34,7 @@ function App() {
           ))}
         </select>
         {sortByDeadline(visible).map((application) => (
-          <ApplicationRow key={application.company} application={application} today={today} />
+          <ApplicationRow key={application.company} application={application} today={today} onStatusChange={(status) => setApplications(applications.map((a) => (a === application ? { ...a, status } : a)))} />
         ))}
       </section>
     </>

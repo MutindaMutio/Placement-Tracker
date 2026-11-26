@@ -3,8 +3,10 @@ This project aims to track a university student's placements they have applied t
 
 The app will list them, allow you to add, edit, delete them, filter by status, sort by deadline, and highlight positions that are closing soon.
 
-**Status:** Four functions are written and tested: filter applications by status, sort them by deadline, count the days left until a deadline, and flag applications that are closing soon or past their deadline. There is no web page or back end yet.
+**Status:** A React page lists applications, sorted by deadline. You can filter by status and change an application's status from a dropdown. A Not started application is flagged when its deadline is 7 days or fewer away (bold and red) or has passed (strikethrough). This is backed by five tested functions: filter by status, sort by deadline, days left, urgency, and adding days to a date. There is no back end yet.
 
-**Tests:** 10 passing tests. Run them with `npm test --prefix client`.
+**Limitations:** The rows shown are fake demo data, built from today's date. Status changes are not saved, so a reload resets them. Dates use UTC, which can differ from the UK date just after midnight in summer. Each application has a single deadline, so a later deadline such as an online test can't be tracked separately.
 
-**Planned:** A React front end that lists applications, adds new ones and changes their status, with the data kept in the browser only for now.
+**Tests:** 11 passing tests. Run them with `npm test --prefix client`.
+
+**Planned:** Adding, editing and deleting applications, notes, a back end API, and saving data.

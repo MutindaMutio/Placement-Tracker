@@ -19,3 +19,7 @@
 [data-urgency="Deadline passed"] {
   text-decoration: line-through;
 }
+
+select {
+  align-self: flex-start;
+}

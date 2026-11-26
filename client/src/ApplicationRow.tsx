@@ -10,7 +10,7 @@ export function ApplicationRow({ application, today }: ApplicationRowProps) {
   const urgency = getUrgency(application, today);
   return (
     <div>
-      <span>{application.status}</span>
+      <span className="status-pill">{application.status}</span>
       <p>{application.company}, {application.role}</p>
       <p className="deadline" data-urgency={urgency}>{application.deadline}</p>
       <p>{urgency}</p>

@@ -64,11 +64,11 @@ h1 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
-  font-size: 56px;
+  font-size: 32px;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 26px;
     margin: 20px 0;
   }
 }
